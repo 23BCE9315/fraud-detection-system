@@ -353,6 +353,10 @@ app.use((req, res) => {
   res.status(404).json({ error: `Route not found: ${req.method} ${req.path}` });
 });
 
+app.get("/", (req, res) => {
+  res.send("Fraud Detection API is running 🚀");
+});
+
 // ── Start ─────────────────────────────────────────────────────────────────────
 app.listen(PORT, () => {
   console.log(`
