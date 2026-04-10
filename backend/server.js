@@ -211,6 +211,10 @@ app.get("/api/risk-scores/:accountId", async (req, res) => {
 // ── Fraud routes: /api/fraud/* ────────────────────────────────────────────────
 app.use("/api/fraud", fraudRoutes(driver));
 
+app.get("/", (req, res) => {
+  res.send("Fraud Detection API is running 🚀");
+});
+
 // ── Alerts route: /api/alerts ─────────────────────────────────────────────────
 app.use("/api", alertsRoute(driver));
 
